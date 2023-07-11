@@ -58,7 +58,7 @@ def oneTwo : List Nat := [1, 2]
 def length (α : Type) (xs : List α) : Nat :=
   match xs with
   | List.nil => Nat.zero
-  | List.cons y ys => Nat.succ (length α ys)
+  | List.cons _ ys => Nat.succ (length α ys)
 
 -- length Nat oneTwo
 -- length α [1, 2]
@@ -78,7 +78,7 @@ def length (α : Type) (xs : List α) : Nat :=
 def length2 (α : Type) (xs : List α) : Nat :=
   match xs with
   | [] => Nat.zero
-  | y :: ys => Nat.succ (length α ys)
+  | _ :: ys => Nat.succ (length α ys)
 
 #eval length Nat primesUnder10
 #eval length2 Nat primesUnder10
@@ -88,7 +88,7 @@ def length2 (α : Type) (xs : List α) : Nat :=
 def implicitTypeLength {α : Type} (xs : List α) : Nat :=
   match xs with
   | [] => Nat.zero
-  | y :: ys => Nat.succ (length α ys)
+  | _ :: ys => Nat.succ (length α ys)
 
 #eval implicitTypeLength oneTwo
 

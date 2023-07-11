@@ -16,7 +16,7 @@ deriving Repr
 def isZero (n : Nat) : Bool :=
   match n with
   | Nat.zero => true
-  | Nat.succ k => false
+  | Nat.succ _ => false
 
 #eval isZero Nat.zero
 #eval isZero (Nat.succ Nat.zero)
@@ -33,7 +33,7 @@ def pred (n : Nat) : Nat :=
 
 def depth (p : Point3D) : Float :=
   match p with
-  | {x := h, y := w, z := d} => d
+  | {x := _, y := _, z := d} => d
 
 #eval depth {x := 1, y := 2, z := 3}
 
