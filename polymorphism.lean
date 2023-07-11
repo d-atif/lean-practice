@@ -124,8 +124,8 @@ def sevens : String × (Int × Nat) := ("VII", 7, 4+3)
 #eval sevens
 
 -- inductive Sum (α : Type) (β : Type) : Type where
---   | inl: α → Sum α β
---   | inr: β → Sum α β
+--   | inl : α → Sum α β
+--   | inr : β → Sum α β
 
 def PetName : Type := String ⊕ String
 
