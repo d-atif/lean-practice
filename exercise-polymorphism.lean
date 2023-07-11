@@ -11,13 +11,13 @@ def findLastEl {α : Type} (aList : List α) : Option α:=
   match aList with
   | List.nil => none
   | List.cons x List.nil => x
-  | List.cons x xs => findLastEl xs
+  | List.cons _ xs => findLastEl xs
 
 def List.findLastEl2 {α : Type} (aList : List α) : Option α:=
   match aList with
   | [] => none
   | x :: List.nil => x
-  | x :: xs => findLastEl xs
+  | _ :: xs => findLastEl xs
 
 #eval findLastEl someList
 #eval someList.findLastEl2
