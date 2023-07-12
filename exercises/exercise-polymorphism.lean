@@ -70,3 +70,15 @@ def howManyDogs (pets : List PetName) : Nat :=
 
 #eval howManyDogs animals
 
+-- Ex 4.
+-- Write a function zip that combines two lists into a list of pairs.
+-- The resulting list should be as long as the shortest input list.
+-- Start the definition with
+-- def zip {α β : Type} (xs : List α) (ys : List β) : List (α × β) :=
+
+
+-- def zip {α β : Type} (xs : List α) (ys : List β) : List (α × β) :=
+  -- match xs, ys with
+  -- | [] => zip ys xs
+  -- | x :: xs => List.cons (x, zip ys xs)
+  -- | y :: ys => (y, xs)
